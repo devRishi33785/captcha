@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+        function onSubmit(token) {
+          document.getElementById("contact-form").submit();
+        }
+      </script>
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Contact us</h1>
+    <form action="/contact" method="post" id="contact-form">
+        <label for="name">Name</label>
+        <input type="text" name="name">
+        <label for="email">Email</label>
+        <input type="email" name="email">
+        <label for="message">Message</label>
+        <input type="text" name="message">
+        <button class="g-recaptcha" data-sitekey="6Ld7xB0rAAAAAJrXUaayI3E_QECN6OwdW8yoHDSn" data-callback="onSubmit">Submit</button>
+    </form>    
+</body>
+</html>
